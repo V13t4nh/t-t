@@ -17,3 +17,13 @@ export async function getStudios() {
   const data = await loadData();
   return data.studios || [];
 }
+
+export async function getMovies() {
+  const data = await loadData();
+  return data.movies || [];
+}
+
+export async function getGenres() {
+  const data = await loadData();
+  return data.genres || [];
+}
