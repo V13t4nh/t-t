@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Xếp Hạng - TEST</title>
+    <meta name="description" content="Top phim hot nhất được yêu thích nhất hiện tại">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">TEST</a>
+            
+            <div class="nav-menu">
+                <a href="new-movies.html" class="nav-link">Phim Mới</a>
+                <a href="rankings.html" class="nav-link active">Bảng Xếp Hạng</a>
+                <a href="genres.html" class="nav-link">Thể Loại</a>
+                <a href="actors.html" class="nav-link">Diễn Viên</a>
+                <a href="studios.html" class="nav-link">Hãng Sản Xuất</a>
+            </div>
+
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="search" placeholder="Tìm kiếm phim..." class="search-input">
+                    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+                <button class="language-btn" onclick="toggleLanguage()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <span id="language-text">VI</span>
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-search">
+                <input type="search" placeholder="Tìm kiếm phim..." class="search-input">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+            <a href="new-movies.html" class="mobile-nav-link">Phim Mới</a>
+            <a href="rankings.html" class="mobile-nav-link active">Bảng Xếp Hạng</a>
+            <a href="genres.html" class="mobile-nav-link">Thể Loại</a>
+            <a href="actors.html" class="mobile-nav-link">Diễn Viên</a>
+            <a href="studios.html" class="mobile-nav-link">Hãng Sản Xuất</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title ranking-title">Bảng Xếp Hạng</h1>
+            <p class="page-description">Top phim hot nhất được yêu thích nhất hiện tại</p>
+        </div>
+    </header>
+
+    <!-- Rankings Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Top 3 Featured -->
+            <section class="top-featured-movies">
+                <!-- Movie 1 -->
+                <div class="ranking-card-wrapper">
+                    <div class="ranking-badge top-1">1</div>
+                    <article class="movie-card">
+                        <div class="movie-poster">
+                            <img src="/placeholder.svg?height=600&width=400" alt="Top Gun: Maverick" loading="lazy">
+                            <div class="movie-overlay">
+                                <button class="play-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="5,3 19,12 5,21"></polygon>
+                                    </svg>
+                                    Xem Ngay
+                                </button>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Top Gun: Maverick</h3>
+                            <p class="movie-genre">Action, Drama</p>
+                            <div class="movie-meta">
+                                <div class="meta-left">
+                                    <div class="rating">
+                                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                        </svg>
+                                        <span>9.1</span>
+                                    </div>
+                                    <span class="year">2022</span>
+                                </div>
+                                <span class="duration">131 min</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Movie 2 -->
+                <div class="ranking-card-wrapper">
+                    <div class="ranking-badge top-2">2</div>
+                    <article class="movie-card">
+                        <div class="movie-poster">
+                            <img src="/placeholder.svg?height=600&width=400" alt="Spider-Man: No Way Home" loading="lazy">
+                            <div class="movie-overlay">
+                                <button class="play-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="5,3 19,12 5,21"></polygon>
+                                    </svg>
+                                    Xem Ngay
+                                </button>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Spider-Man: No Way Home</h3>
+                            <p class="movie-genre">Action, Adventure</p>
+                            <div class="movie-meta">
+                                <div class="meta-left">
+                                    <div class="rating">
+                                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                        </svg>
+                                        <span>8.7</span>
+                                    </div>
+                                    <span class="year">2021</span>
+                                </div>
+                                <span class="duration">148 min</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Movie 3 -->
+                <div class="ranking-card-wrapper">
+                    <div class="ranking-badge top-3">3</div>
+                    <article class="movie-card">
+                        <div class="movie-poster">
+                            <img src="/placeholder.svg?height=600&width=400" alt="Avatar: The Way of Water" loading="lazy">
+                            <div class="movie-overlay">
+                                <button class="play-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="5,3 19,12 5,21"></polygon>
+                                    </svg>
+                                    Xem Ngay
+                                </button>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Avatar: The Way of Water</h3>
+                            <p class="movie-genre">Sci-Fi, Adventure</p>
+                            <div class="movie-meta">
+                                <div class="meta-left">
+                                    <div class="rating">
+                                        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                        </svg>
+                                        <span>8.5</span>
+                                    </div>
+                                    <span class="year">2022</span>
+                                </div>
+                                <span class="duration">192 min</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Rankings List -->
+            <section class="rankings-list-section">
+                <h2 class="section-title-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="fire-icon">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.88 16.19 7 11.88 7 9z"/>
+                    </svg>
+                    Top 10 Phim Hot
+                </h2>
+                <div class="rankings-list">
+                    <!-- Movie 4 -->
+                    <div class="ranking-item">
+                        <div class="ranking-number rank-4">4</div>
+                        <div class="ranking-poster">
+                            <img src="/placeholder.svg?height=600&width=400" alt="The Batman" loading="lazy">
+                        </div>
+                        <div class="ranking-info">
+                            <h3 class="ranking-movie-title">The Batman</h3>
+                            <p class="ranking-movie-meta">Action, Crime • 2022</p>
+                        </div>
+                        <div class="ranking-details">
+                            <div class="ranking-rating">
+                                <span class="font-bold">8.2</span>
+                            </div>
+                            <p class="ranking-duration">176 min</p>
+                        </div>
+                    </div>
+
+                    <!-- Movie 5 -->
+                    <div class="ranking-item">
+                        <div class="ranking-number rank-5">5</div>
+                        <div class="ranking-poster">
+                            <img src="/placeholder.svg?height=600&width=400" alt="Dune" loading="lazy">
+                        </div>
+                        <div class="ranking-info">
+                            <h3 class="ranking-movie-title">Dune</h3>
+                            <p class="ranking-movie-meta">Sci-Fi, Adventure • 2021</p>
+                        </div>
+                        <div class="ranking-details">
+                            <div class="ranking-rating">
+                                <span class="font-bold">8.0</span>
+                            </div>
+                            <p class="ranking-duration">155 min</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

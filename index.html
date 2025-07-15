@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST - Xem Phim Trực Tuyến</title>
+    <meta name="description" content="Nền tảng xem phim trực tuyến hàng đầu với chất lượng cao và trải nghiệm tuyệt vời">
+    <meta name="keywords" content="xem phim, phim trực tuyến, phim mới, phim hot, streaming">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">TEST</a>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-menu">
+                <a href="new-movies.html" class="nav-link">Phim Mới</a>
+                <a href="rankings.html" class="nav-link">Bảng Xếp Hạng</a>
+                <a href="genres.html" class="nav-link">Thể Loại</a>
+                <a href="actors.html" class="nav-link">Diễn Viên</a>
+                <a href="studios.html" class="nav-link">Hãng Sản Xuất</a>
+            </div>
+
+            <!-- Search and Language -->
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="search" placeholder="Tìm kiếm phim..." class="search-input">
+                    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+                <button class="language-btn" onclick="toggleLanguage()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <span id="language-text">VI</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-search">
+                <input type="search" placeholder="Tìm kiếm phim..." class="search-input">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+            <a href="new-movies.html" class="mobile-nav-link">Phim Mới</a>
+            <a href="rankings.html" class="mobile-nav-link">Bảng Xếp Hạng</a>
+            <a href="genres.html" class="mobile-nav-link">Thể Loại</a>
+            <a href="actors.html" class="mobile-nav-link">Diễn Viên</a>
+            <a href="studios.html" class="mobile-nav-link">Hãng Sản Xuất</a>
+            <button class="mobile-language-btn" onclick="toggleLanguage()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <span>Tiếng Việt</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="/placeholder.svg?height=800&width=1400" alt="Avatar: The Way of Water" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Avatar: The Way of Water</h1>
+                
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                        </svg>
+                        <span>8.5</span>
+                    </div>
+                    <div class="meta-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>2022</span>
+                    </div>
+                    <div class="meta-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        <span>192 min</span>
+                    </div>
+                </div>
+
+                <p class="hero-genre">Sci-Fi, Adventure</p>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5,3 19,12 5,21"></polygon>
+                        </svg>
+                        Xem Ngay
+                    </button>
+                    <button class="btn btn-secondary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        Thông Tin
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Movies -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Phim Nổi Bật</h2>
+            <div class="movie-grid">
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Avatar: The Way of Water" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem Ngay
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Avatar: The Way of Water</h3>
+                        <p class="movie-genre">Sci-Fi, Adventure</p>
+                        <div class="movie-meta">
+                            <div class="meta-left">
+                                <div class="rating">
+                                    <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                    </svg>
+                                    <span>8.5</span>
+                                </div>
+                                <span class="year">2022</span>
+                            </div>
+                            <span class="duration">192 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Top Gun: Maverick" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem Ngay
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Top Gun: Maverick</h3>
+                        <p class="movie-genre">Action, Drama</p>
+                        <div class="movie-meta">
+                            <div class="meta-left">
+                                <div class="rating">
+                                    <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                    </svg>
+                                    <span>9.1</span>
+                                </div>
+                                <span class="year">2022</span>
+                            </div>
+                            <span class="duration">131 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Black Panther: Wakanda Forever" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem Ngay
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Black Panther: Wakanda Forever</h3>
+                        <p class="movie-genre">Action, Adventure</p>
+                        <div class="movie-meta">
+                            <div class="meta-left">
+                                <div class="rating">
+                                    <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                    </svg>
+                                    <span>7.8</span>
+                                </div>
+                                <span class="year">2022</span>
+                            </div>
+                            <span class="duration">161 min</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Movies -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Xu Hướng</h2>
+            <div class="movie-grid compact">
+                <article class="movie-card compact">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="The Batman" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn small">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Batman</h3>
+                        <div class="movie-meta">
+                            <span class="year">2022</span>
+                            <div class="rating">
+                                <svg class="star-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <span>8.2</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="movie-card compact">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Spider-Man: No Way Home" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn small">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Spider-Man: No Way Home</h3>
+                        <div class="movie-meta">
+                            <span class="year">2021</span>
+                            <div class="rating">
+                                <svg class="star-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <span>8.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="movie-card compact">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Dune" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn small">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Dune</h3>
+                        <div class="movie-meta">
+                            <span class="year">2021</span>
+                            <div class="rating">
+                                <svg class="star-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <span>8.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="movie-card compact">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="No Time to Die" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn small">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">No Time to Die</h3>
+                        <div class="movie-meta">
+                            <span class="year">2021</span>
+                            <div class="rating">
+                                <svg class="star-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <span>7.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Preview -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Thể Loại</h2>
+            <div class="genre-grid">
+                <a href="genres.html" class="genre-card action">
+                    <div class="genre-overlay"></div>
+                    <h3>Hành Động</h3>
+                </a>
+                <a href="genres.html" class="genre-card horror">
+                    <div class="genre-overlay"></div>
+                    <h3>Kinh Dị</h3>
+                </a>
+                <a href="genres.html" class="genre-card comedy">
+                    <div class="genre-overlay"></div>
+                    <h3>Hài Hước</h3>
+                </a>
+                <a href="genres.html" class="genre-card romance">
+                    <div class="genre-overlay"></div>
+                    <h3>Lãng Mạn</h3>
+                </a>
+                <a href="genres.html" class="genre-card scifi">
+                    <div class="genre-overlay"></div>
+                    <h3>Sci-Fi</h3>
+                </a>
+                <a href="genres.html" class="genre-card documentary">
+                    <div class="genre-overlay"></div>
+                    <h3>Tài Liệu</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">TEST</h3>
+                    <p class="footer-description">
+                        Nền tảng xem phim trực tuyến hàng đầu với chất lượng cao và trải nghiệm tuyệt vời.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Phim</h4>
+                    <ul class="footer-links">
+                        <li><a href="new-movies.html">Phim Mới</a></li>
+                        <li><a href="rankings.html">Bảng Xếp Hạng</a></li>
+                        <li><a href="genres.html">Thể Loại</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Khám Phá</h4>
+                    <ul class="footer-links">
+                        <li><a href="actors.html">Diễn Viên</a></li>
+                        <li><a href="studios.html">Hãng Sản Xuất</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Hỗ Trợ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Trung Tâm Trợ Giúp</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TEST. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hãng Sản Xuất - TEST</title>
+    <meta name="description" content="Khám phá những hãng phim hàng đầu thế giới">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">TEST</a>
+            
+            <div class="nav-menu">
+                <a href="new-movies.html" class="nav-link">Phim Mới</a>
+                <a href="rankings.html" class="nav-link">Bảng Xếp Hạng</a>
+                <a href="genres.html" class="nav-link">Thể Loại</a>
+                <a href="actors.html" class="nav-link">Diễn Viên</a>
+                <a href="studios.html" class="nav-link active">Hãng Sản Xuất</a>
+            </div>
+
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="search" placeholder="Tìm kiếm phim..." class="search-input">
+                    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+                <button class="language-btn" onclick="toggleLanguage()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <span id="language-text">VI</span>
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-search">
+                <input type="search" placeholder="Tìm kiếm phim..." class="search-input">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+            <a href="new-movies.html" class="mobile-nav-link">Phim Mới</a>
+            <a href="rankings.html" class="mobile-nav-link">Bảng Xếp Hạng</a>
+            <a href="genres.html" class="mobile-nav-link">Thể Loại</a>
+            <a href="actors.html" class="mobile-nav-link">Diễn Viên</a>
+            <a href="studios.html" class="mobile-nav-link active">Hãng Sản Xuất</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Hãng Sản Xuất</h1>
+            <p class="page-description">Khám phá những hãng phim hàng đầu thế giới</p>
+        </div>
+    </header>
+
+    <!-- Studios Grid - Using Actor-style Layout -->
+    <main class="main-content">
+        <div class="container">
+            <div class="studios-grid">
+                <!-- Marvel Studios -->
+                <article class="studio-card">
+                    <div class="studio-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Marvel Studios" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-logo">
+                                <svg width="48" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Marvel Studios</h3>
+                        <div class="studio-meta">
+                            <div class="meta-left">
+                                <div class="rating">
+                                    <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                    </svg>
+                                    <span>9.2</span>
+                                </div>
+                                <div class="movies-count">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                    <span>32 phim</span>
+                                </div>
+                            </div>
+                            <div class="founded">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                <span>1993</span>
+                            </div>
+                        </div>
+                        <p class="studio-country">Mỹ</p>
+                        <p class="studio-description">Hãng phim siêu anh hùng hàng đầu thế giới với vũ trụ điện ảnh Marvel</p>
+                        <div class="box-office">$28.5B</div>
+                        <div class="recent-movies">
+                            <h4>Phim gần đây:</h4>
+                            <ul>
+                                <li>Black Panther: Wakanda Forever</li>
+                                <li>Thor: Love and Thunder</li>
+                                <li>Doctor Strange 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Warner Bros -->
+                <article class="studio-card">
+                    <div class="studio-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Warner Bros" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-logo">
+                                <svg width="48" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Warner Bros</h3>
+                        <div class="studio-meta">
+                            <div class="meta-left">
+                                <div class="rating">
+                                    <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                    </svg>
+                                    <span>8.8</span>
+                                </div>
+                                <div class="movies-count">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                    <span>156 phim</span>
+                                </div>
+                            </div>
+                            <div class="founded">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                <span>1923</span>
+                            </div>
+                        </div>
+                        <p class="studio-country">Mỹ</p>
+                        <p class="studio-description">Một trong những hãng phim lâu đời và uy tín nhất Hollywood</p>
+                        <div class="box-office">$45.2B</div>
+                        <div class="recent-movies">
+                            <h4>Phim gần đây:</h4>
+                            <ul>
+                                <li>The Batman</li>
+                                <li>Dune</li>
+                                <li>Wonder Woman 1984</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Disney Studios -->
+                <article class="studio-card">
+                    <div class="studio-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Disney Studios" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-logo">
+                                <svg width="48" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Disney Studios</h3>
+                        <div class="studio-meta">
+                            <div class="meta-left">
+                                <div class="rating">
+                                    <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                    </svg>
+                                    <span>9.0</span>
+                                </div>
+                                <div class="movies-count">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                    <span>189 phim</span>
+                                </div>
+                            </div>
+                            <div class="founded">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                <span>1923</span>
+                            </div>
+                        </div>
+                        <p class="studio-country">Mỹ</p>
+                        <p class="studio-description">Hãng phim hoạt hình và gia đình hàng đầu thế giới</p>
+                        <div class="box-office">$52.8B</div>
+                        <div class="recent-movies">
+                            <h4>Phim gần đây:</h4>
+                            <ul>
+                                <li>Encanto</li>
+                                <li>Turning Red</li>
+                                <li>Lightyear</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

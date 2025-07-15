@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phim Mới - TEST</title>
+    <meta name="description" content="Khám phá những bộ phim mới nhất và hot nhất hiện tại">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">TEST</a>
+            
+            <div class="nav-menu">
+                <a href="new-movies.html" class="nav-link active">Phim Mới</a>
+                <a href="rankings.html" class="nav-link">Bảng Xếp Hạng</a>
+                <a href="genres.html" class="nav-link">Thể Loại</a>
+                <a href="actors.html" class="nav-link">Diễn Viên</a>
+                <a href="studios.html" class="nav-link">Hãng Sản Xuất</a>
+            </div>
+
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="search" placeholder="Tìm kiếm phim..." class="search-input">
+                    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+                <button class="language-btn" onclick="toggleLanguage()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <span id="language-text">VI</span>
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-search">
+                <input type="search" placeholder="Tìm kiếm phim..." class="search-input">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+            <a href="new-movies.html" class="mobile-nav-link active">Phim Mới</a>
+            <a href="rankings.html" class="mobile-nav-link">Bảng Xếp Hạng</a>
+            <a href="genres.html" class="mobile-nav-link">Thể Loại</a>
+            <a href="actors.html" class="mobile-nav-link">Diễn Viên</a>
+            <a href="studios.html" class="mobile-nav-link">Hãng Sản Xuất</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Phim Mới</h1>
+            <p class="page-description">Khám phá những bộ phim mới nhất và hot nhất hiện tại</p>
+        </div>
+    </header>
+
+    <!-- New Movies Grid -->
+    <main class="main-content">
+        <div class="container">
+            <div class="movie-grid compact">
+                <!-- Movie 1 -->
+                <article class="movie-card compact">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Avatar: The Way of Water" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn small">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Avatar: The Way of Water</h3>
+                        <div class="movie-meta">
+                            <span class="year">2022</span>
+                            <div class="rating">
+                                <svg class="star-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <span>8.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie 2 -->
+                <article class="movie-card compact">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Top Gun: Maverick" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn small">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Top Gun: Maverick</h3>
+                        <div class="movie-meta">
+                            <span class="year">2022</span>
+                            <div class="rating">
+                                <svg class="star-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <span>9.1</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie 3 -->
+                <article class="movie-card compact">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Black Panther: Wakanda Forever" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn small">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Black Panther: Wakanda Forever</h3>
+                        <div class="movie-meta">
+                            <span class="year">2022</span>
+                            <div class="rating">
+                                <svg class="star-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <span>7.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie 4 -->
+                <article class="movie-card compact">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="The Batman" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn small">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Batman</h3>
+                        <div class="movie-meta">
+                            <span class="year">2022</span>
+                            <div class="rating">
+                                <svg class="star-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <span>8.2</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie 5 -->
+                <article class="movie-card compact">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Doctor Strange in the Multiverse of Madness" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn small">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Doctor Strange in the Multiverse of Madness</h3>
+                        <div class="movie-meta">
+                            <span class="year">2022</span>
+                            <div class="rating">
+                                <svg class="star-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <span>7.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie 6 -->
+                <article class="movie-card compact">
+                    <div class="movie-poster">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Jurassic World Dominion" loading="lazy">
+                        <div class="movie-overlay">
+                            <button class="play-btn small">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                                Xem
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Jurassic World Dominion</h3>
+                        <div class="movie-meta">
+                            <span class="year">2022</span>
+                            <div class="rating">
+                                <svg class="star-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <span>6.1</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
